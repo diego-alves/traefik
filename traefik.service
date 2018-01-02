@@ -1,7 +1,9 @@
 [Unit]
 Description=Traefik reverse proxy
+Requires=docker.service
 After=network.target
 After=syslog.target
+After=docker.service
 
 [Service]
 Type=simple
